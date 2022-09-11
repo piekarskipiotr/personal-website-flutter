@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'colors/app_colors.dart';
 import 'colors/color_helper.dart';
 
@@ -8,6 +7,9 @@ class AppTheme {
     primaryColor: AppColors.primary,
     primaryColorDark: AppColors.secondary,
     primarySwatch: ColorHelper.toMaterialColor(AppColors.primary),
+    splashColor: Colors.transparent,
+    highlightColor: Colors.transparent,
+    hoverColor: Colors.transparent,
     colorScheme: const ColorScheme.dark(
       primary: AppColors.primary,
       secondary: AppColors.secondary,
@@ -15,26 +17,4 @@ class AppTheme {
     ),
     scaffoldBackgroundColor: AppColors.black,
   );
-
-  static void initSystemChromeSettings() {
-    SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarBrightness: Brightness.dark,
-        statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Colors.transparent,
-        systemNavigationBarDividerColor: Colors.transparent,
-        systemNavigationBarIconBrightness: Brightness.dark,
-      ),
-    );
-
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.edgeToEdge,
-      overlays: [SystemUiOverlay.top],
-    );
-
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-  }
 }

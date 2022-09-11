@@ -3,8 +3,6 @@ import 'package:personal_website_flutter/pages/profile_social_links_page.dart';
 import 'package:personal_website_flutter/resources/app_theme.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  AppTheme.initSystemChromeSettings();
   runApp(const MyApp());
 }
 
